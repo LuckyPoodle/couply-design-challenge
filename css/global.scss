@@ -1,0 +1,16 @@
+@use 'variables';
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    margin: 0;
+    background-color: #1F2023;
+    font-family: 'Nunito', sans-serif;
+}
