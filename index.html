@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="css/main.css">
     </head>
     <body>  
+       
         <header>
             <img src="assets/couply_logo.png" alt="logo">
 
@@ -22,6 +23,7 @@
             </a>
 
             <aside>
+                <img src="assets/mobile-exit.svg" alt="Exit mobile menu" class="exit">
                 <nav>
                     <ul>
                         <li class="active"> <a href="#">Home</a> </li>
@@ -56,7 +58,7 @@
 
                     <div class="testimonial hide-mobile">
                         <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80">                    </div>
-                        <div class="testimonial-msg">
+                        <div class="testimonial-msg hide-mobile">
                             <span>Holy sh*t, I saved $500!</span>
                             <span>- Janey Doe</span>
                         </div>
@@ -68,15 +70,15 @@
 
                 <div class="steps">
                     <div>
-                        <span>1</span>
+                        <span class="number">1</span>
                         <p>Download the Extension for Chrome or Firefox.</p>
                     </div>
                     <div>
-                        <span>2</span>
+                        <span class="number">2</span>
                         <p>Visit your favorite online retailers.</p>
                     </div>
                     <div>
-                        <span>3</span>
+                        <span class="number">3</span>
                         <p><span class="special-focus">Save!</span> Apply coupons from the toolbar.</p>
                     </div>
                 </div>
@@ -182,19 +184,19 @@
                     <div class="price">$170</div>
                 </div>
     
-                <div>
+                <div class="hide-mobile">
                     <span>Men's Mile Shoes</span>
                     <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="shoes">
                     <div class="price">$170</div>
                 </div>
     
-                <div>
+                <div class="hide-mobile">
                     <span>Children 's Mile Shoes</span>
                     <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="shoes">
                     <div class="price">$170</div>
                 </div>
     
-                <div>
+                <div class="hide-mobile">
                     <span>Dinner Plates</span>
                     <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="shoes">
                     <div class="price">$170</div>
@@ -264,19 +266,20 @@
                 <span>Copyright 2023 @ Couply LLC</span>
             </div>
         </footer>
-      
+     
+        <script>
+            const menuBtn = document.querySelector('.menu')
+            const exitBtn = document.querySelector('.exit')
+            const menu = document.querySelector('aside')
+            menuBtn.addEventListener('click',  function(e) {
+                e.preventDefault();
+                menu.classList.toggle('toggle-menu');
+            })
+            exitBtn.addEventListener('click',  function(e) {
+                e.preventDefault();
+                menu.classList.toggle('toggle-menu');
+            })
 
-
-
-
-
-
-
-
-
-
-
-
-        <script src="" async defer></script>
+        </script>
     </body>
 </html>

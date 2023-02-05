@@ -1,3 +1,254 @@
 @use 'variables';
 @use 'global';
 
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 0 10px;
+}
+
+header img{
+    width: 10.4rem;
+    height: 3.3rem;
+}
+
+header svg{
+    width: 42px;
+}
+
+aside {
+    position:fixed;
+    height: 100vh;
+    z-index:1;
+    right: 0;
+    top: 0;
+    background-color: var(--primary-color);
+    width: 40%;
+    padding: 3em;
+    text-align: right;
+    transition: transform .6s;
+    transform: translateX(100%);
+
+    a{
+        color: white;
+        font-size: 2.6rem;
+    }
+
+    .exit{
+        width: 30px;
+        height: 30px;
+        color: white;
+        border-radius: .3em;
+        cursor: pointer;
+    }
+
+    ul{
+        margin-top: 6em;
+
+        li{
+            margin-bottom: 1.5em;
+            position: relative;
+
+            a{
+                display: inline-block;
+                position: relative;
+                padding-bottom: 0.5em;
+            }
+        }
+        
+       
+        
+        li:hover a::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-bottom: medium solid white;
+            width: 50%;
+            height: 0;
+        }
+        
+    
+    }
+
+    button{
+        background: var(--nav-button-color);
+        color: black;
+        width: 90%;
+        border-radius: 4px;
+        cursor: pointer;
+
+        .cta-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2px 5px;
+
+            span{
+                font-size: 1.8rem
+            }
+
+            svg{
+                width: 1.8rem;
+                height: 1.8rem;
+                padding-left: 0.1em;
+            }
+        }
+    }
+   
+}
+
+.toggle-menu{
+    transform: translateX(0);
+}
+
+
+/* MAIN */
+
+main{
+    border-top: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+
+    h1{
+        font-size: 3.2rem;
+        text-align: center;
+        padding-left: 4.9rem;
+        padding-right: 4.9rem;
+    }
+
+    span{
+        font-size: 1.6rem;
+    }
+
+    .avatars{
+
+        margin-bottom: 4rem;
+
+    }
+
+
+    img{
+      
+        border-radius: 50%;
+        border: 5px solid white;
+        width: 48px;
+        height: 48px;
+        margin-right: -10px;
+        
+    }
+    img:nth-child(1) {
+        border: none;
+        width: 43px;
+        height: 43px;
+      }
+
+
+
+
+
+    .col-1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .col-2{
+        border-top: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+        .steps{
+            margin-left: 2rem;
+            margin-right: 2rem;
+          
+
+            div{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              
+
+                .special-focus{
+                    color: var(--secondary-color);
+                    font-size: 2rem;
+                    
+                }
+
+                .number{
+                    width: 2.9rem;
+                    height: 2.9rem;
+                    border-radius:  1.45rem;
+                    background-color: black;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    
+                }
+
+                p{
+                    margin-top: 15px;
+                    font-size: 2rem;
+                    width: 90%;
+                    
+                    text-align: left;
+                    align-self: left;
+                   
+                }
+            }
+        }
+
+
+
+        button{
+            background: var(--button-color);
+            color: black;
+            width: 90%;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            border: 2px solid black;
+            box-shadow: 4px 4px 0px black;
+    
+            .cta-content{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 2px 5px;
+    
+                span{
+                    font-size: 1.8rem
+                }
+    
+                svg{
+                    width: 1.8rem;
+                    height: 1.8rem;
+                    padding-left: 0.1em;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+
+.offers{
+
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
