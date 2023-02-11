@@ -1,48 +1,41 @@
-@use 'variables';
+@use "variables";
 
-*, *:before, *:after {
-    box-sizing: border-box;
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
-
 body {
-    margin: 0;
-    background-color: var(--background-color);
-    font-family: 'Nunito', sans-serif;
+  margin: 0;
+  background-color: var(--background-color);
+  font-family: "Nunito", sans-serif;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-
-
 
 a {
-    color: var(--link-color);
-    text-decoration: none;
-    font-family: 'Nunito', sans-serif;
+  color: var(--link-color);
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
 }
 
-
-
-
-
-/* Utils */ 
+/* Utils */
 
 .hide-mobile {
-    display: none;
+  display: none;
 }
 
 @media only screen and (min-width: 620px) {
-
-    .hide-tablet {
-        display: none;
-    }
-
+  .hide-tablet {
+    display: none;
+  }
 }

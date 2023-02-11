@@ -1,254 +1,348 @@
-@use 'variables';
-@use 'global';
+@use "variables";
+@use "global";
 
 header {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 10px 0 10px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px 0 10px;
 }
 
-header img{
-    width: 10.4rem;
-    height: 3.3rem;
+header img {
+  width: 10.4rem;
+  height: 3.3rem;
 }
 
-header svg{
-    width: 42px;
+header svg {
+  width: 42px;
 }
 
 aside {
-    position:fixed;
-    height: 100vh;
-    z-index:1;
-    right: 0;
-    top: 0;
-    background-color: var(--primary-color);
-    width: 40%;
-    padding: 3em;
-    text-align: right;
-    transition: transform .6s;
-    transform: translateX(100%);
+  position: fixed;
+  height: 100vh;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  background-color: var(--primary-color);
+  width: 40%;
+  padding: 3em;
+  text-align: right;
+  transition: transform 0.6s;
+  transform: translateX(100%);
 
-    a{
-        color: white;
-        font-size: 2.6rem;
+  a {
+    color: white;
+    font-size: 2.6rem;
+  }
+
+  .exit {
+    width: 30px;
+    height: 30px;
+    color: white;
+    border-radius: 0.3em;
+    cursor: pointer;
+  }
+
+  ul {
+    margin-top: 6em;
+
+    li {
+      margin-bottom: 1.5em;
+      position: relative;
+
+      a {
+        display: inline-block;
+        position: relative;
+        padding-bottom: 0.5em;
+      }
     }
 
-    .exit{
-        width: 30px;
-        height: 30px;
-        color: white;
-        border-radius: .3em;
-        cursor: pointer;
+    li:hover a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      border-bottom: medium solid white;
+      width: 50%;
+      height: 0;
     }
+  }
 
-    ul{
-        margin-top: 6em;
+  button {
+    background: var(--nav-button-color);
+    color: black;
+    width: 90%;
+    border-radius: 4px;
+    cursor: pointer;
 
-        li{
-            margin-bottom: 1.5em;
-            position: relative;
+    .cta-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2px 5px;
 
-            a{
-                display: inline-block;
-                position: relative;
-                padding-bottom: 0.5em;
-            }
-        }
-        
-       
-        
-        li:hover a::after{
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            border-bottom: medium solid white;
-            width: 50%;
-            height: 0;
-        }
-        
-    
+      span {
+        font-size: 1.8rem;
+      }
+
+      svg {
+        width: 1.8rem;
+        height: 1.8rem;
+        padding-left: 0.1em;
+      }
     }
-
-    button{
-        background: var(--nav-button-color);
-        color: black;
-        width: 90%;
-        border-radius: 4px;
-        cursor: pointer;
-
-        .cta-content{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 2px 5px;
-
-            span{
-                font-size: 1.8rem
-            }
-
-            svg{
-                width: 1.8rem;
-                height: 1.8rem;
-                padding-left: 0.1em;
-            }
-        }
-    }
-   
+  }
 }
 
-.toggle-menu{
-    transform: translateX(0);
+.toggle-menu {
+  transform: translateX(0);
 }
 
+/* MAIN SECTION*/
 
-/* MAIN */
+main {
+  border-top: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-main{
+  h1 {
+    font-size: 3.2rem;
+    text-align: center;
+    padding-left: 4.9rem;
+    padding-right: 4.9rem;
+  }
+
+  span {
+    font-size: 1.6rem;
+  }
+
+  .avatars {
+    margin-bottom: 4rem;
+  }
+
+  img {
+    border-radius: 50%;
+    border: 5px solid white;
+    width: 48px;
+    height: 48px;
+    margin-right: -10px;
+  }
+  img:nth-child(1) {
+    border: none;
+    width: 43px;
+    height: 43px;
+  }
+
+  .col-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .col-2 {
     border-top: 1px solid black;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
+    .steps {
+      margin-left: 2rem;
+      margin-right: 2rem;
 
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-    h1{
-        font-size: 3.2rem;
-        text-align: center;
-        padding-left: 4.9rem;
-        padding-right: 4.9rem;
-    }
+        .special-focus {
+          color: var(--secondary-color);
+          font-size: 2rem;
+        }
 
-    span{
-        font-size: 1.6rem;
-    }
+        .number {
+          width: 2.9rem;
+          height: 2.9rem;
+          border-radius: 1.45rem;
+          background-color: black;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
-    .avatars{
+        p {
+          margin-top: 15px;
+          font-size: 2rem;
+          width: 90%;
 
-        margin-bottom: 4rem;
-
-    }
-
-
-    img{
-      
-        border-radius: 50%;
-        border: 5px solid white;
-        width: 48px;
-        height: 48px;
-        margin-right: -10px;
-        
-    }
-    img:nth-child(1) {
-        border: none;
-        width: 43px;
-        height: 43px;
+          text-align: left;
+          align-self: left;
+        }
       }
+    }
 
+    button {
+      background: var(--button-color);
+      color: black;
+      width: 90%;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      border: 2px solid black;
+      box-shadow: 4px 4px 0px black;
+      margin-bottom: 5rem;
 
-
-
-
-    .col-1{
+      .cta-content {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-    }
+        padding: 2px 5px;
 
-    .col-2{
-        border-top: 1px solid black;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
-
-        .steps{
-            margin-left: 2rem;
-            margin-right: 2rem;
-          
-
-            div{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-              
-
-                .special-focus{
-                    color: var(--secondary-color);
-                    font-size: 2rem;
-                    
-                }
-
-                .number{
-                    width: 2.9rem;
-                    height: 2.9rem;
-                    border-radius:  1.45rem;
-                    background-color: black;
-                    color: white;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    
-                    
-                }
-
-                p{
-                    margin-top: 15px;
-                    font-size: 2rem;
-                    width: 90%;
-                    
-                    text-align: left;
-                    align-self: left;
-                   
-                }
-            }
+        span {
+          font-size: 1.8rem;
         }
 
-
-
-        button{
-            background: var(--button-color);
-            color: black;
-            width: 90%;
-            border-radius: 4px;
-            cursor: pointer;
-            font-weight: bold;
-            border: 2px solid black;
-            box-shadow: 4px 4px 0px black;
-    
-            .cta-content{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 2px 5px;
-    
-                span{
-                    font-size: 1.8rem
-                }
-    
-                svg{
-                    width: 1.8rem;
-                    height: 1.8rem;
-                    padding-left: 0.1em;
-                }
-            }
+        svg {
+          width: 1.8rem;
+          height: 1.8rem;
+          padding-left: 0.1em;
         }
+      }
     }
-
+  }
 }
 
+.offers {
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
 
+/* BRANDS SECTION */
 
+.brands {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 32rem;
 
-
-.offers{
+  .logoes {
+    display: grid;
+    width: 80%;
+    grid-template-areas:
+      "amazon bestbuy"
+      "shopify walmart";
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+    row-gap: 4rem;
+    margin-top: 5rem;
 
     img{
         width: 100%;
-        object-fit: cover;
+        height: 3rem;
     }
+
+
+  }
+
+
+
+  .logoes img:nth-child(1) {
+    grid-area: amazon;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+  }
+  .logoes svg:nth-child(2) {
+    grid-area: bestbuy;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+  }
+  .logoes img:nth-child(3) {
+    grid-area: shopify;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+  }
+  .logoes img:nth-child(4) {
+    grid-area: walmart;
+    object-fit: contain;
+    aspect-ratio: 1/1;
+  }
+}
+
+.offers {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 90rem;
+
+
+  .coupons {
+    align-self: center;
+
+    .coupon {
+      width: 349px;
+      height: 204px;
+      border: 2px solid #000000;
+      box-shadow: 4px 4px 0px #000000;
+      border-radius: 4px;
+      margin-bottom: 18px;
+      border-bottom-width: 0;
+      padding-bottom: 0;
+      position: relative;
+
+      span{
+        background: white;
+        display: block;
+        width: 100%;
+        padding: 18px 169px 18px 20px;
+        font-size: 1.6rem;
+        font-weight: bold;
+      }
+
+      .price{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: black;
+        font-weight: bold;
+        color: white;
+        font-size: 2.2rem;
+        height: 60px;
+        width: 94px;
+        margin-bottom: -1px;
+      }
+      
+    }
+  }
+
+  .coupons .coupon:nth-child(1) {
+    margin-top: -10rem;
+  }
+
+  img{
+    width: 346px;
+    height: 145px;
+    object-fit: cover;
+    border-bottom-left-radius: 4px;
+    border-bottom: 5px solid black;
+  }
+
+  .view-all{
+    display: flex;
+    gap: 1.1rem;
+    svg{
+        width: 3.2rem;
+    }
+    span{
+        font-size: 2.6rem;
+        text-decoration: underline;
+    }
+  }
 }
