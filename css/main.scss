@@ -155,7 +155,7 @@ main {
       div {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: baseline;
 
         .special-focus {
           color: var(--secondary-color);
@@ -171,6 +171,7 @@ main {
           display: flex;
           justify-content: center;
           align-items: center;
+          margin-right: 20px;
         }
 
         p {
@@ -242,15 +243,11 @@ main {
     row-gap: 4rem;
     margin-top: 5rem;
 
-    img{
-        width: 100%;
-        height: 3rem;
+    img {
+      width: 100%;
+      height: 3rem;
     }
-
-
   }
-
-
 
   .logoes img:nth-child(1) {
     grid-area: amazon;
@@ -282,9 +279,9 @@ main {
   align-items: center;
   height: 90rem;
 
-
   .coupons {
     align-self: center;
+    margin-bottom: 7.3rem;
 
     .coupon {
       width: 349px;
@@ -297,7 +294,7 @@ main {
       padding-bottom: 0;
       position: relative;
 
-      span{
+      span {
         background: white;
         display: block;
         width: 100%;
@@ -306,7 +303,7 @@ main {
         font-weight: bold;
       }
 
-      .price{
+      .price {
         position: absolute;
         bottom: 0;
         right: 0;
@@ -318,7 +315,6 @@ main {
         width: 94px;
         margin-bottom: -1px;
       }
-      
     }
   }
 
@@ -326,7 +322,7 @@ main {
     margin-top: -10rem;
   }
 
-  img{
+  img {
     width: 346px;
     height: 145px;
     object-fit: cover;
@@ -334,15 +330,83 @@ main {
     border-bottom: 5px solid black;
   }
 
-  .view-all{
+  .view-all {
     display: flex;
     gap: 1.1rem;
-    svg{
-        width: 3.2rem;
+    svg {
+      width: 3.2rem;
     }
-    span{
-        font-size: 2.6rem;
-        text-decoration: underline;
+    span {
+      font-size: 2.6rem;
+      text-decoration: underline;
+    }
+  }
+}
+
+footer {
+  .first {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 38px 33px 73px 33px;
+
+    span {
+      font-weight: bold;
+      font-size: 1.4rem;
+    }
+    .col2 {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .social-media {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+
+  .second {
+    margin-bottom: 69px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+      display: flex;
+      gap: 3rem;
+      padding-left: 38px;
+      padding-right: 38px;
+
+      li {
+        position: relative;
+        font-size: 1.8rem;
+
+        a {
+          display: inline-block;
+          position: relative;
+          padding-bottom: 0.5em;
+        }
+      }
+
+      li:hover a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-bottom: medium solid black;
+        width: 50%;
+        height: 0;
+      }
     }
   }
 }

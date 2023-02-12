@@ -183,7 +183,7 @@ main .col-2 .steps {
 main .col-2 .steps div {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
 }
 main .col-2 .steps div .special-focus {
   color: var(--secondary-color);
@@ -198,6 +198,7 @@ main .col-2 .steps div .number {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 20px;
 }
 main .col-2 .steps div p {
   margin-top: 15px;
@@ -295,6 +296,7 @@ main .col-2 button .cta-content svg {
 }
 .offers .coupons {
   align-self: center;
+  margin-bottom: 7.3rem;
 }
 .offers .coupons .coupon {
   width: 349px;
@@ -348,4 +350,64 @@ main .col-2 button .cta-content svg {
 .offers .view-all span {
   font-size: 2.6rem;
   text-decoration: underline;
+}
+
+footer .first {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 38px 33px 73px 33px;
+}
+footer .first span {
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+footer .first .col2 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+footer .first .social-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+footer .first .social-media img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  aspect-ratio: 1/1;
+}
+footer .second {
+  margin-bottom: 69px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer .second ul {
+  display: flex;
+  gap: 3rem;
+  padding-left: 38px;
+  padding-right: 38px;
+}
+footer .second ul li {
+  position: relative;
+  font-size: 1.8rem;
+}
+footer .second ul li a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.5em;
+}
+footer .second ul li:hover a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: medium solid black;
+  width: 50%;
+  height: 0;
 }/*# sourceMappingURL=main.css.map */
