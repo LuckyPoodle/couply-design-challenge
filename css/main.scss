@@ -714,6 +714,23 @@ footer {
         gap: unset;
       }
     }
+
+    .special-testimonial{
+      animation: fadeInUp 4s forwards;
+      opacity: 0;
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        transform: translateY(30px);
+      }
+      to{
+        transform:translateY(0);
+        opacity: 1;
+      }
+      
+    }
+
   }
 
   .brands {

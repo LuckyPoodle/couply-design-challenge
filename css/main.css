@@ -681,6 +681,19 @@ footer .second ul li:hover a::after {
     justify-content: space-evenly;
     gap: unset;
   }
+  main .special-testimonial {
+    animation: fadeInUp 4s forwards;
+    opacity: 0;
+  }
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
   .brands .logoes {
     grid-template-areas: "amazon bestbuy shopify walmart viewmore";
     grid-template-columns: repeat(5, 1fr);
